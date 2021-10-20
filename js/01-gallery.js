@@ -7,7 +7,7 @@ console.log(galleryRef);
 
 function createGalleryMarkup (items) {
     const markup = items.map(item => {
-        return `<div class="gallery__item">
+    return `<div class="gallery__item">
     <a class="gallery__link" href="${item.original}">
     <img
       class="gallery__image"
@@ -26,7 +26,9 @@ createGalleryMarkup(galleryItems);
 galleryRef.addEventListener('click', onImageClick);
 
 function onImageClick(event) {
+
     event.preventDefault();
+
     if (event.target.nodeName !== "IMG") {
         return;
     }
@@ -47,4 +49,5 @@ function onImageClick(event) {
     }
 }
 
+    
 console.log(galleryItems);
