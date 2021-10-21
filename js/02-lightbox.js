@@ -7,15 +7,15 @@ console.log(galleryRef);
 
 function createGalleryMarkup (items) {
     const markup = items.map(item => {
-        return `<a class="gallery__item" href="${item.original}">
+        return `<li><a class="gallery__item" href="${item.original}">
                 <img class="gallery__image" src="${item.preview}" alt="${item.description}" />
-                </a>`}).join("");
+                </a></li>`}).join("");
 
     galleryRef.innerHTML = markup;
 }
 
 createGalleryMarkup(galleryItems);
 
-new SimpleLightbox('.gallery .gallery__item', {captionsData: "alt", captionPosition: "botton", captionDelay: 250});
+new SimpleLightbox('.gallery .gallery__item', {captionsData: "alt", captionDelay: 250});
 
 console.log(galleryItems);
